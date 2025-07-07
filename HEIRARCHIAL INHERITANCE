@@ -1,0 +1,60 @@
+// HEIRARCHIAL INHERITANCE
+#include <iostream>
+#include <string>
+using namespace std;
+class Person{
+    public:
+        string name;
+        int age;
+        // Person(string name, int age){
+        //     this->name=name;
+        //     this->age=age;
+        // }
+};
+class Student: public Person{
+    //we want student's name, age, rollNo.
+    public:
+    int rollNo;
+    // Student(string name, int age, int rollNo) : Person(name, age){
+    //     cout<<"Child constructor \n";
+    //     this->rollNo=rollNo;
+    // }
+    // void getInfo(){
+    //     cout<<"name: "<<name<<endl;
+    //     cout<<"age: "<<age<<endl;
+    //     cout<<"Roll NO: "<<rollNo<<endl;
+    // }
+};
+class Teacher: public Person{
+    public:
+    string subject;
+};
+// class GradStudent : public Student{
+//     public:
+//     string researchArea;
+// };
+//class TA: public Student, public Teacher{
+    
+//};
+int main() {
+    // GradStudent s1;
+    // s1.name = "Tony stark";
+    // s1.researchArea = "Quantum physics";
+    // cout<<s1.name<<endl;
+    // cout<<s1.researchArea<<endl;
+    // TA t1;
+    // t1.name="Tony stark";
+    // t1.subject="Quantum Physics";
+    // cout<<t1.name<<endl;
+    // cout<<t1.subject<<endl;
+    Student p1;
+    p1.name="Tony stark";
+    p1.age=34;
+    p1.rollNo=23;
+    //p1.subject="Quantum Physics";
+    cout<<p1.name<<endl;
+    //cout<<p1.subject<<endl;
+    cout<<p1.age<<endl;
+    cout<<p1.rollNo<<endl;
+    return 0;
+}
