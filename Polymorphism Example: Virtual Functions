@@ -1,0 +1,27 @@
+// POLYMORPHISM EXAMPLE: virtual functions
+#include <iostream>
+#include <string>
+using namespace std;
+class parent{
+    public:
+    void getInfo(){
+        cout<<"Parent class \n";
+    }
+    virtual void hello(){
+        cout<<"Heeloo \n";
+    }
+};
+class child : public parent{
+    public:
+    void getInfo(){
+        cout<<"Child class \n";
+    }
+    void hello(){
+        cout<<"Heeloo from child\n";
+    }
+};
+int main() {
+    parent c1;
+    c1.hello();
+    return 0;
+}
